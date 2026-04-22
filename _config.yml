@@ -1,5 +1,6 @@
 title: Masaki Site
-description: 日本語と英語の両方を提供するサイト
+description: Web制作・技術メモ・活動記録
+lang: ja
 
 defaults:
   - scope:
