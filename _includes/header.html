@@ -1,13 +1,37 @@
 <header class="site-header">
   <h1 class="site-title">
-    <a href="/index.html">{{ site.title }}</a>
+    <a href="{% if page.lang == 'en' %}/en/index.html{% else %}/index.html{% endif %}">{{ site.title }}</a>
   </h1>
 
-  <p class="site-description">{{ site.description }}</p>
+  <p class="site-description">
+    {% if page.lang == "en" %}
+      Web development, notes, and activity log
+    {% else %}
+      {{ site.description }}
+    {% endif %}
+  </p>
 
-  <nav class="site-nav">
-    <a href="/index.html">ホーム</a>
-    <a href="/about.html">このサイトについて</a>
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </nav>
+  {% if page.lang == "en" %}
+    <nav class="site-nav">
+      <a href="/en/index.html">Home</a>
+      <a href="/en/about.html">About</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="{{ page.ja_url }}">日本語</a>
+      <span class="current">English</span>
+    </div>
+  {% else %}
+    <nav class="site-nav">
+      <a href="/index.html">ホーム</a>
+      <a href="/about.html">このサイトについて</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <div class="lang-switch">
+      <span class="current">日本語</span>
+      <a href="{{ page.en_url }}">English</a>
+    </div>
+  {% endif %}
 </header>
