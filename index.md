@@ -2,8 +2,10 @@
 title: ホーム
 ---
 
-# Masaki Site
+# ようこそ
 
-ようこそ。
+これは GitHub Pages と Jekyll で作った、最小レイアウト版のトップページです。
 
-- [About](/about/)
+Markdown で本文を書き、見た目やメニューは共通レイアウト側でまとめて管理しています。
+
+- [このサイトについて](/about)
