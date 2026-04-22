@@ -84,7 +84,8 @@
       margin-top: 16px;
     }
 
-    .site-nav a {
+    .site-nav a,
+    .lang-switch a {
       display: inline-block;
       padding: 7px 12px;
       border: 1px solid var(--line);
@@ -95,9 +96,27 @@
       transition: 0.2s ease;
     }
 
-    .site-nav a:hover {
+    .site-nav a:hover,
+    .lang-switch a:hover {
       color: var(--accent);
       border-color: var(--accent);
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .lang-switch .current {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 9999px;
+      background: #f3f6fb;
+      color: var(--text);
+      font-weight: 600;
     }
 
     main {
@@ -153,10 +172,10 @@
   <div class="site-wrap">
     {% include header.html %}
 
-    {% if page.url == "/" or page.url == "/index.html" %}
+    {% if page.url == "/index.html" or page.url == "/en/index.html" %}
       <section class="hero">
-        <h2 class="hero-title">{{ site.title }}</h2>
-        <p class="hero-text">{{ site.description }}</p>
+        <h2 class="hero-title">{{ page.hero_title | default: site.title }}</h2>
+        <p class="hero-text">{{ page.hero_text | default: site.description }}</p>
       </section>
     {% endif %}
 
