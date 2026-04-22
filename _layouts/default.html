@@ -37,13 +37,18 @@
     }
 
     .hero {
-      padding: 40px 24px;
+      position: relative;
+      padding: 56px 24px;
       border-radius: 20px;
-      background:
-        linear-gradient(135deg, rgba(47,111,235,0.10), rgba(47,111,235,0.02)),
-        linear-gradient(180deg, #ffffff, #f7f9fc);
       border: 1px solid var(--line);
       margin-bottom: 32px;
+      overflow: hidden;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.82)),
+        url('/assets/images/header.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero-title {
@@ -54,7 +59,7 @@
 
     .hero-text {
       margin: 0;
-      color: var(--muted);
+      color: #444;
     }
 
     .site-header {
