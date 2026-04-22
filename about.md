@@ -1,12 +1,11 @@
 ---
 title: このサイトについて
+lang: ja
 permalink: /about
+en_url: /en/about
+home_url: /
 ---
 
 # このサイトについて
 
-このページは `about.md` から生成されています。
-
-Jekyll では、Markdown ファイルに front matter を付けることでページとして処理できます。
-
-- [ホームへ戻る](/)
+このページは日本語版の About ページです。
