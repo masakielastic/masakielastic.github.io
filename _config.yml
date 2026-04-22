@@ -1,3 +1,8 @@
 title: Masaki Site
-description: GitHub Pages + Jekyll
-theme: jekyll-theme-minimal
+description: GitHub Pages + Jekyll の最小レイアウト構成
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
