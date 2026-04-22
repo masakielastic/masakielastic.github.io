@@ -1,107 +1,61 @@
 <!doctype html>
-<html lang="ja">
+<html lang="{{ page.lang | default: 'ja' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
-  </title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <style>
-    :root {
-      --bg: #fcfcfc;
-      --text: #222;
-      --muted: #666;
-      --line: #ddd;
-      --accent: #2f6feb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
-        "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      color: var(--text);
-      background: var(--bg);
+        "Yu Gothic", sans-serif;
       line-height: 1.8;
+      color: #222;
+      background: #fcfcfc;
     }
-
-    .site-wrap {
+    .wrap {
       max-width: 760px;
       margin: 0 auto;
       padding: 24px 16px 64px;
     }
-
-    .site-header {
+    header {
       margin-bottom: 32px;
       padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid #ddd;
     }
-
-    .site-title {
-      margin: 0 0 8px;
-      font-size: 1.6rem;
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
     }
-
-    .site-title a {
-      color: inherit;
+    nav a {
       text-decoration: none;
+      border: 1px solid #ddd;
+      padding: 6px 10px;
+      border-radius: 9999px;
+      color: #222;
+      background: white;
     }
-
-    .site-description {
-      margin: 0 0 16px;
-      color: var(--muted);
+    nav a:hover {
+      color: #2f6feb;
+      border-color: #2f6feb;
+    }
+    .lang-switch {
+      margin-top: 12px;
       font-size: 0.95rem;
     }
-
-    .site-nav {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .site-nav a {
-      display: inline-block;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
-      border-radius: 9999px;
-      text-decoration: none;
-      color: var(--text);
-      background: #fff;
-    }
-
-    .site-nav a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    main h1 {
-      line-height: 1.4;
-      margin-top: 0;
-    }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.9rem;
+    .lang-switch a {
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="site-wrap">
+  <div class="wrap">
     {% include header.html %}
-
     <main>
       {{ content }}
     </main>
-
-    <footer>
-      <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
-    </footer>
   </div>
 </body>
 </html>
