@@ -1,11 +1,25 @@
 ---
 title: このサイトについて
-lang: ja
-permalink: /about
-en_url: /en/about
-home_url: /
+description: 自己紹介ページ
+permalink: /about.html
 ---
 
 # このサイトについて
 
-このページは日本語版の About ページです。
+これは自己紹介ページのサンプルです。
+
+## 想定している内容
+
+- 名前
+- 取り組んでいること
+- 興味のある分野
+- 外部リンク
+
+## 例
+
+Web制作、技術メモ、学習記録をまとめるための個人サイトです。  
+GitHub Pages を使うことで、Markdown ベースで内容を整理しながら公開できます。
+
+## 戻る
+
+- [ホームへ戻る](/index.html)
